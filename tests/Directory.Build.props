@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+    <ItemGroup Condition="$(MSBuildProjectName.EndsWith('Tests'))">
+        <Compile Include="GlobalUsings.Tests.cs" />
+    </ItemGroup>
+</Project>
+
+<!-- 
+	Aplicar configuración a todos los proyectos que esten en los subdirectorios, tomando como raiz donde se encuentra este archivo. 
+	En este caso vamos a incluir en el compilado de todos los proyectos el archivo GlobalUsings.Tests.cs, solo si el nombre del proyecto termina en 'Tests' 
+	Learn more https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=vs-2022 
+-->
